@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeWithHSK</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            /* outline: 1px solid red; */
+        }
+
+
+        body {
+            background-image: url("blue-polygon-dark-background_53876-118498.avif");
+            background-size: cover;
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            justify-content: space-around;
+            align-items: center;
+            height: 85px;
+            background-color: rgb(16, 16, 60);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 20px;
+
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 110px 0;
+            align-items: center;
+
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .rightSection {
+            margin-top: 70px;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .rightSection img {
+            padding-top: 0px;
+            width: 400px;
+            height: 350px;
+            margin: 50px 10;
+            border: rgb(4, 4, 36);
+            opacity: 0.6;
+        }
+
+        .blue {
+            color: rgb(154, 82, 220);
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(180, 118, 238);
+            font-size: 1.04rem;
+        }
+
+        #element {
+            color: rgb(154, 82, 220);
+        }
+
+        pre {
+            font-size: 1.5rem;
+            font-family: monospace;
+            position: absolute;
+            top: 10;
+            left: 9%;
+            color: rgb(154, 82, 220);
+
+
+        }
+
+        .secondSection {
+            max-width: 86vw;
+            margin: auto;
+            height: 80vh;
+
+        }
+
+        .secondSection h1 {
+            font-size: 1.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .text-gray {
+            color: gray;
+        }
+
+        .box {
+            width: 77vw;
+            height: 1px;
+            background-color: white;
+            border: 0;
+            margin: 50px -10px;
+            display: flex;
+        }
+
+        .box .vertical {
+            width: 0.7px;
+            height: 114px;
+            margin-top: -50px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .box .vertical img {
+            width: 80px;
+            height: 83px;
+            margin: -83px -33px;
+        }
+
+        .vertical-text {
+            font-size: 14px;
+            margin: 122px -51px;
+            white-space: nowrap;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .box .vertical-desc {
+            font-size: 0.8rem;
+            font-weight: lighter;
+            margin: -96px -40px;
+            position: relative;
+            top: 3px;
+            color: gray;
+            width: 132px;
+
+        }
+
+        .third-section {
+            display: flex;
+            height: 80vh;
+
+        }
+
+        .third-section h2 {
+            font-size: 3.5rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            margin: 0 20px;
+            position: relative;
+            left: 38%;
+            top: 17%;
+            color: rgb(102, 98, 147);
+
+        }
+
+        .third-left img {
+            width: 420px;
+            height: 410px;
+            border-radius: 50%;
+            opacity: 1;
+            margin: 70px -63px;
+            position: relative;
+            right: 13%;
+
+        }
+
+        .third-right p {
+            font-size: 0.8rem;
+            color: gray;
+            position: relative;
+            margin: 0 0px;
+            top: 45%;
+            left: 8%;
+        }
+
+        .third-bottom button {
+            position: relative;
+            top: 64%;
+            right: 322%;
+            background-color: rgb(154, 82, 220);
+            color: white;
+            height: 35px;
+            width: 91px;
+            border: rgb(4, 4, 36);
+            border-radius: 40px;
+        }
+
+        hr {
+            width: 80%;
+            height: 0.7px;
+            position: relative;
+            display: flex;
+            left: 2%;
+            top: 2%;
+            margin: 0 40px;
+            background-color: rgb(154, 82, 220);
+            border: none;
+        }
+
+        .fourth-left img {
+            position: relative;
+            width: 420px;
+            height: 410px;
+            border-radius: 10%;
+            left: 57%;
+            opacity: 1;
+            border-bottom-color: rgb(154, 82, 220);
+        }
+
+        .fourth-section h2 {
+            display: flex;
+            position: relative;
+            width: fit-content;
+            top: 20%;
+            left: 30%;
+            font-size: 3.5rem;
+            color: rgb(113, 108, 113);
+
+        }
+
+        .fourth-section h1 {
+            font-size: 2.5rem;
+            width: fit-content;
+            color: rgb(154, 82, 220);
+            display: flex;
+            margin: -240px 0px;
+            text-align: center;
+            position: relative;
+            bottom: 100%;
+            left: 28%;
+
+        }
+
+        .fourth-section p {
+            top: 3px;
+            color: gray;
+            width: 132px;
+            font-size: 0.9rem;
+            top: 3px;
+            margin: 270px 370px;
+            white-space: nowrap;
+            text-align: center;
+
+        }
+
+        .fourth-right img {
+            width: 420px;
+            height: 410px;
+            border-radius: 10%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+            margin: 0 130px;
+        }
+
+        .t1 h1 {
+            font-size: 2.5rem;
+            width: fit-content;
+            color: rgb(154, 82, 220);
+            display: flex;
+            margin: -347px 255px;
+            text-align: center;
+            position: relative;
+
+        }
+
+        .t1 p {
+            top: 3px;
+            color: gray;
+            width: 132px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin: 367px 650px;
+        }
+
+        .t2 img {
+            width: 420px;
+            height: 410px;
+            border-radius: 10%;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            opacity: 1;
+            margin: 0 130px;
+            left: 50%;
+        }
+
+        .t2 h1 {
+            font-size: 2.5rem;
+            width: fit-content;
+            color: rgb(154, 82, 220);
+            display: flex;
+            margin: -307px 10px;
+            text-align: center;
+            position: relative;
+            left: 25%;
+
+        }
+
+        .t2 p {
+            top: 3px;
+            color: gray;
+            width: 132px;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            margin: 350px 350px;
+        }
+
+        .container {
+            display: flex;
+            background-image: url("blue-polygon-dark-background_53876-118498.avif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .box1 {
+            width: 50%;
+            height: 80vh;
+            /* background-color:rgb(9, 9, 60); */
+            padding: 20px;
+            margin: 14px 310px;
+            border-radius: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+
+        }
+
+        .box1 h2 {
+            color: rgb(154, 82, 220);
+            font-size: 2.5rem;
+            margin: 56px 200px;
+            padding: 0px 0px;
+
+        }
+
+        .box1 input {
+            width: 70%;
+            height: 40px;
+            padding: 11px;
+            margin: 20px 50px;
+            border: none;
+            border-radius: 50px;
+            background-color: rgba(25, 25, 25, .2);
+            color: white;
+            border: 1px solid rgb(154, 82, 220);
+            justify-content: space-between;
+            background-image: url("back.avif");
+        }
+
+        .box1 input text {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .button {
+            width: 25%;
+            height: 40px;
+            padding: 11px;
+            margin: 5px 207px;
+            border-radius: 50px;
+            background-color: rgb(154, 82, 220);
+            color: white;
+            border: 1px solid rgb(154, 82, 220);
+            justify-content: space-between;
+        }
+
+        .reset {
+            margin: 15px 50px;
+            padding: 0px 0px;
+            position: relative;
+            top: 0px;
+            left: 404px;
+
+            border: 1px solid rgb(154, 82, 220);
+            border-radius: 50px;
+            width: 15%;
+            height: 35px;
+            color: white;
+            background-color: rgb(154, 82, 220);
+            justify-content: space-between;
+        }
+
+        #message {
+            position: relative;
+
+            font-size: 0.8rem;
+            /* margin: 2px 130px;
+            padding: 3px; */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                <pre>&lt;/&gt;</pre> Hassan's Portfolio
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/" class="home">Home</a></li>
+                    <li> <a href="/" class="about">About Me</a></li>
+                    <li><a href="/" class="skills">Skills</a></li>
+                    <li><a href="/" class="scroll">Projects</a></li>
+                    <li><a href="/" class="contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, <br>My name is <span class="blue"> Hassan</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+
+            </div>
+            <div class="rightSection">
+                <div class="img">
+                    <img src="cyber-security-expert-working-with-technology-neon-lights_23-2151645607.avif" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="secondSection">
+            <span class="text-gray">What actually defines me</span>
+            <h1>My skills</h1>
+
+
+            </div>
+            <div class="box">
+                <div class="vertical">
+                    <img src="images (2).jpeg" alt="">
+                    <div class="vertical-text"> HTML developer </div>
+                    <div class="vertical-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos tempore veritatis impedit
+                        laborum mollitia quisquam nostrum exercitationem nobis ipsum.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img src="images (4).jpeg" alt="">
+                    <div class="vertical-text"> CSS developer</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos tempore veritatis impedit
+                        laborum mollitia quisquam nostrum exercitationem nobis ipsum.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="images (3).jpeg" alt="">
+                    <div class="vertical-text">Web developer</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos tempore veritatis impedit
+                        laborum mollitia quisquam nostrum exercitationem nobis ipsum.
+                    </div>
+                </div>
+                <div class="vertical">
+                    <img src="programming-background-with-person-working-with-codes-computer_23-2150010125.avif" alt="">
+                    <div class="vertical-text">Javacript developer</div>
+                    <div class="vertical-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem quos tempore veritatis impedit
+                        laborum mollitia quisquam nostrum exercitationem nobis ipsum.
+                    </div>
+                </div>
+            </div>
+
+
+            </div>
+        </section>
+        <hr class="'line">
+        <section class="third-section">
+            <h2>About <br> Me</h2>
+            <div class="third-left">
+                <img src="img6.avif" alt="">
+            </div>
+            <div class="third-right">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab mollitia totam quod eius,<br> natus omnis
+                    laborum corporis repudiandae cupiditate dolorem tempora?<br> Saepe perspiciatis, nam est reiciendis
+                    sapiente eaque pariatur quae debitis cumque <br> at commodi deserunt ipsa aliquid quasi nihil ad
+                    laboriosam, fuga vel eos explicabo, <br> optio sint temporibus doloremque corrupti!</p>
+            </div>
+            <div class="third-bottom">
+                <button>Contact me</button>
+            </div>
+        </section>
+        <section class="fourth-section">
+            <h2>My Projects</h2>
+            <div class="fourth-left">
+                <img src="port.jpg" alt="">
+            </div>
+            <div class="fourth-right">
+                <h1>Portfolio Website</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. <br> Id dolorum quia accusamus eius ea ut
+                    repellendus minus illo <br> exercitationem quidem. Magnam accusamus ut delectus id?</p>
+                <img src="ecommerc ewebsite.avif" alt="">
+                <div class="t1">
+                    <h1>Ecommerce Store</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Dolore qui odio quod illo ipsam
+                        perferendis magni, asperiores <br> natus animi, aliquid quae in. Assumenda neque aspernatur <br>
+                        impedit
+                        delectus, illum eveniet explicabo.
+                    </p>
+                </div>
+                <div class="t2">
+                    <img src="blog1.avif" alt="">
+                    <h1>Blogging Website</h1>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus <br> perspiciatis distinctio
+                        excepturi recusandae consequuntur nihil <br> assumenda corporis, labore placeat quas quasi
+                        inventore
+                        magni <br>. Modi, dolore.</p>
+
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <div class="box1">
+                <h2>Contact Me</h2>
+                <form class="form">
+                    <input type="text" name="name" placeholder="Full Name">
+                    <input type="text" name="email" placeholder="Email Address">
+                    <input type="text" name="message" placeholder="Enter your message">
+                    <!-- <button type="button" class="reset">reset</button> -->
+                    <div id="message"></div>
+                    <button type="button" class="button" onclick="sendEmail()">Send Message</button>
+
+
+            </div>
+
+        </div>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("wGzmcET2mo-iOqigJ");
+        })();
+
+        function sendEmail() {
+            emailjs.send("service_3eoruto", "template_4px536j", {
+                to_name: "Recipient Name",
+                from_name: document.querySelector('input[name="name"]').value,
+                from_email: document.querySelector('input[name="email"]').value,
+                message: document.querySelector('input[name="message"]').value,
+                reply_to: document.querySelector('input[name="email"]').value,
+            }).then(function (response) {
+                console.log('Success!', response.status, response.text);
+                if (nameInput.value === "" || emailInput.value === "" || messageInput.value === "") {
+                    sweetAlert("Error sending message", "Please fill all fields", "error");
+                } else {
+                    sweetAlert("Message sent successfully", "", "success");
+                }
+
+
+            }, function (error) {
+                console.log('Failed...', error);
+                sweetAlert("Message failed to send", "", "error");
+
+            });
+        }
+
+        function displayMessage(message, color) {
+            var messageDiv = document.getElementById('message');
+            messageDiv.innerText = message;
+            messageDiv.style.color = color;
+        }
+
+
+        var typed = new Typed('#element', {
+            strings: ['Web developer', 'Graphic Designer'],
+            typeSpeed: 50,
+        });
+
+        var nameInput = document.querySelector('input[name="name"]');
+        var emailInput = document.querySelector('input[name="email"]');
+        var messageInput = document.querySelector('input[name="message"]');
+        var registerButton = document.querySelector('.button');
+        var resetbtnn = document.querySelector('.reset');
+        var messageDiv = document.getElementById('message');
+
+
+      function save(){
+        const name = document.querySelector('input[name="name"]').value;
+        const email = document.querySelector('input[name="email"]').value;
+        const message = document.querySelector('input[name="message"]').value;
+
+        localStorage.setItem('name',name);
+        localStorage.setItem('email',email);
+        localStorage.setItem('message',message);
+        }
+      document.querySelector('.button').addEventListener('click',function(){
+        save();
+
+      });
+      console.log(localStorage);
+
+
+        registerButton.addEventListener('click', function () {
+            if (emailInput.value === "" || nameInput.value === "" || messageInput.value === "") {
+                displayMessage("Please fill all the fields", "red");
+            }
+        });
+
+        document.querySelector('.scroll').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.fourth-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.contact').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.container').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.skills').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.secondSection').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.about').addEventListener('click', function (a) {
+            a.preventDefault();
+            document.querySelector('.third-section').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        document.querySelector('.home').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.firstSection').scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        nameInput.addEventListener('click', function () {
+            if (nameInput.value === "") {
+                displayMessage("Please fill the name", "red");
+            }
+        });
+        emailInput.addEventListener('click', function () {
+            if (emailInput.value === "") {
+                displayMessage("Please fill the email", "red");
+            }
+        });
+        messageInput.addEventListener('click', function () {
+            if (messageInput.value === "") {
+                displayMessage("Please fill the message", "red");
+            }
+        });
+
+        resetbtnn.addEventListener('click', function () {
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            displayMessage("Form has been reset", "green");
+        });
+
+
+
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
